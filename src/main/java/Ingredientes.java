@@ -10,6 +10,9 @@ public class Ingredientes {
         this.peso = peso;
     }
 
+    public Ingredientes() {
+    }
+
     public String getNombre() {
         return nombre;
     }
