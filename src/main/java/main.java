@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class main {
@@ -17,21 +18,22 @@ public class main {
                         "Despues de mezclar todo, prender la estufa y poner parte de la mezcla en una sarten","" +
                                 ":)")),
                 1.30,"hotcakes");
-        System.out.println("Bienvenido.");
-        System.out.println("1. Agregar un ingrediente");
-        System.out.println("2. Hacer una receta");
-        System.out.println("3. Revisa el recetario :)");
+        System.out.println("Welcome you lovely human.");
+        System.out.println("1. Add and ingredient");
+        System.out.println("2. Make a Recipe");
+        System.out.println("3. Check the cookbook :)");
+        System.out.println("0. Exit :(");
         ans=sc.nextInt();
         switch (ans){
             case 1:
                 Ingredientes nuevo = new Ingredientes();
-                System.out.println("deme el nombre");
+                System.out.println("Name of the ingredient");
                 nuevo.setNombre(sc.next());
-                System.out.println("¿Es salado?(y/n)");
-                if (sc.next()=="y"){
+                System.out.println("Is it salty?(y/n)");
+                if (Objects.equals(sc.next(), "y")){
                     nuevo.setSalty(true);
                 }else nuevo.setSalty(false);
-                System.out.println("cuanto pesa");
+                System.out.println("Tell me the weight");
                 nuevo.setPeso(sc.nextDouble());
                 ingredientesDispo.add(nuevo);
                 for (int i=0;i<ingredientesDispo.size();i++){
